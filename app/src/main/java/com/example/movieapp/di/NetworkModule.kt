@@ -1,7 +1,7 @@
 package com.example.movieapp.di
 
+import com.example.movieapp.BuildConfig // Corrected BuildConfig import
 import com.example.movieapp.data.api.WatchModeApi
-import com.facebook.shimmer.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -43,6 +43,7 @@ private fun provideAuthInterceptor() =
             originalUrl
                 .newBuilder()
                 .addQueryParameter("api_key", "5746bbc1d10942551fd1f6c41b137869")
+                // Using BuildConfig
                 .build()
         val request =
             original
@@ -58,8 +59,6 @@ private fun provideOkHttpClient(authInterceptor: Interceptor) =
         .addInterceptor(authInterceptor)
         .addInterceptor(
             HttpLoggingInterceptor().apply {
-                // Using a hardcoded value for simplicity as BuildConfig might not be available here.
-                // In a real app, you would ensure the correct BuildConfig is imported.
                 level =
                     if (BuildConfig.DEBUG) {
                         HttpLoggingInterceptor.Level.BODY
