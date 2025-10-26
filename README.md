@@ -30,10 +30,12 @@ Features (mapped to assignment requirements)
    - Fetches and displays movies and TV shows from Watchmode API.
    - Top tabs / toggle to switch between Movies and TV Shows.
    - Shimmer/placeholder effect while listing content.
+   ![Home Screen Screenshot](app/src/main/res/drawable/homemoviescreen.png)
 
 2. Details Screen
    - Displays title, description, release date, and poster image.
    - Shimmer/placeholder while details or image load.
+   ![Details Screen Screenshot](path/to/your/details_screen_screenshot.png)
 
 3. API Integration
    - Retrofit used for networking.
