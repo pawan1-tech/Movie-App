@@ -1,9 +1,3 @@
-<p align="center">
-  <img src="app/src/main/res/drawable/homemoviescreen.png" alt="Banner" width="22%" />
-  <img src="app/src/main/res/drawable/homemoviescreen.png" alt="Home Screen" width="22%" />
-  <img src="app/src/main/res/drawable/homemoviescreen.png" alt="Details Screen" width="22%" />
-  <img src="app/src/main/res/drawable/homemoviescreen.png" alt="Movie-TV Toggle" width="22%" />
-</p>
 
 # 🎬 Movie-App (Jetpack Compose) — Watchmode API Assignment
 
@@ -16,6 +10,11 @@ A **Movie & TV Show discovery Android app** built with **Jetpack Compose** that 
 This project satisfies assignment requirements: **simultaneous API calls using RxKotlin `Single.zip`**, **MVVM architecture**, **Dependency Injection (Koin)**, **Retrofit networking**, **shimmer loading states**, **graceful error handling**, and a **details screen**.
 
 ---
+<p align="center">
+  <img src="app/src/main/res/drawable/homemoviescreen.png" alt="Banner" width="22%" />
+  <img src="app/src/main/res/drawable/moviedetailscreen.png" alt="Movie-TV Toggle" width="22%" />
+  <img src="app/src/main/res/drawable/hometvscreen.png" alt="Home Screen" width="22%" />
+</p>
 
 ## 📑 Contents
 - [About](#about)
@@ -50,15 +49,13 @@ This app provides a simple, practical Movie & TV Show discovery experience:
 - Fetches and displays movies and TV shows from the Watchmode API.  
 - Top **tabs/toggle** to switch between Movies and TV Shows.  
 - **Shimmer effect** for loading state.  
-  ![Home Screen Screenshot](app/src/main/res/drawable/homemoviescreen.png)
+  
 
 ---
 
 ### 2. Details Screen
 - Displays **title, description, release date**, and **poster image**.  
-- Shimmer placeholders while details or images load.  
-  ![Details Screen Screenshot](app/src/main/res/drawable/details_screen.png)
-
+- Shimmer placeholders while details or images load.
 ---
 
 ### 3. API Integration
