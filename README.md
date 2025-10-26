@@ -97,3 +97,116 @@ This app provides a simple, practical Movie & TV Show discovery experience:
 
 ## 📁 Project Structure
 
+app/
+├── src/main/java/.../
+│ ├── ui/ → Compose screens & components
+│ ├── viewmodel/ → ViewModels
+│ ├── data/ → Repository, models, network layer
+│ ├── di/ → Koin modules
+├── src/test/ → Unit tests
+└── build.gradle
+
+---
+
+## 🚀 Getting Started — Setup & Configuration
+
+### Prerequisites
+- Android Studio (latest stable version)
+- JDK 11+
+- Gradle wrapper included
+- A valid **Watchmode API key** (register at [https://api.watchmode.com/](https://api.watchmode.com/))
+
+---
+
+### Configuration — Watchmode API Key
+
+#### Option A: `local.properties` (Recommended)
+1. Open or create `local.properties` in project root.  
+2. Add your API key:
+   ```properties
+   WATCHMODE_API_KEY="your_watchmode_api_key_here"
+```
+In app/build.gradle, ensure your API key is exposed as a BuildConfig field:
+
+```groovy
+def watchmodeApiKey = project.hasProperty("WATCHMODE_API_KEY") ? project.WATCHMODE_API_KEY : ""
+buildTypes.each {
+    it.buildConfigField "String", "WATCHMODE_API_KEY", "\"${watchmodeApiKey}\""
+}
+```
+## 🧱 Build & Run
+1. Clone the Repository
+```bash
+git clone https://github.com/pawan1-tech/Movie-App.git
+```
+2. Open in Android Studio
+Open the project directory in Android Studio.
+
+3. Add your Watchmode API key (see above)
+4. Run the App
+Select a device/emulator → Run ▶️
+
+### Build Release APK
+```bash
+./gradlew assembleRelease
+```
+Output:
+`app/build/outputs/apk/release/app-release.apk`
+
+### Run Unit Tests
+```bash
+./gradlew test
+```
+## 🧠 Implementation Notes
+Simultaneous Calls: Two Watchmode endpoints fetched concurrently using RxKotlin Single.zip.
+
+Error Handling: Repository & ViewModel manage error states and emit UI-safe results.
+
+Shimmer: Skeleton placeholders for loading states.
+
+DI: Koin modules provide Retrofit, Repository, and ViewModel instances.
+
+Images: Coil handles async image loading with placeholder/error states.
+
+## ✅ Testing & Quality
+| Area | Tool |
+|---|---|
+| Unit Tests | JUnit, Mockito / MockK |
+| Architecture Validation | MVVM |
+| Reactive Calls | RxKotlin Single.zip |
+| UI Framework | Jetpack Compose |
+
+## ⚠️ Assumptions & Known Issues
+- Requires a valid Watchmode API key.
+
+- Watchmode rate limits may throttle frequent requests.
+
+- Some API fields may change — defensive model mapping used.
+
+- Offline caching and pagination not yet implemented.
+
+## 🌱 Future Improvements
+- Integrate Paging 3 for larger datasets.
+
+- Add offline caching (Room/SQLDelight).
+
+- Implement Compose UI tests.
+
+- Improve animations and transitions.
+
+## 🤝 Contributing
+- Contributions are welcome!
+
+- Open an issue or submit a pull request.
+
+- Follow Kotlin and Jetpack Compose best practices.
+
+## 📜 License
+This project is licensed under the MIT License — see below for details.
+
+
+## 📬 Contact
+Maintainer: @pawan1-tech
+For issues, feedback, or sharing APK/video links, please open a GitHub issue or contact via the repository.
+
+---
