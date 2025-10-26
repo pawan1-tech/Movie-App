@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="app/src/main/res/drawable/movie_app_banner.png" alt="Movie App Banner" width="100%" />
+  <img src="app/src/main/res/drawable/homemoviescreen.png" alt="Banner" width="22%" />
+  <img src="app/src/main/res/drawable/homemoviescreen.png" alt="Home Screen" width="22%" />
+  <img src="app/src/main/res/drawable/homemoviescreen.png" alt="Details Screen" width="22%" />
+  <img src="app/src/main/res/drawable/homemoviescreen.png" alt="Movie-TV Toggle" width="22%" />
 </p>
 
 # 🎬 Movie-App (Jetpack Compose) — Watchmode API Assignment
