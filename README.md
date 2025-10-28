@@ -46,21 +46,21 @@ This app provides a simple, practical Movie & TV Show discovery experience:
 ## 🎯 Features (mapped to assignment requirements)
 
 ### 1. Home Screen
-- Fetches and displays movies and TV shows from the Watchmode API.  
-- Top **tabs/toggle** to switch between Movies and TV Shows.  
-- **Shimmer effect** for loading state.  
-  
+- Fetches and displays movies and TV shows from the Watchmode API.
+- Top **tabs/toggle** to switch between Movies and TV Shows.
+- **Shimmer effect** for loading state.
+
 
 ---
 
 ### 2. Details Screen
-- Displays **title, description, release date**, and **poster image**.  
+- Displays **title, description, release date**, and **poster image**.
 - Shimmer placeholders while details or images load.
 ---
 
 ### 3. API Integration
-- **Retrofit** used for networking.  
-- **Two API calls executed simultaneously** using RxKotlin `Single.zip`, results merged in ViewModel.  
+- **Retrofit** used for networking.
+- **Two API calls executed simultaneously** using RxKotlin `Single.zip`, results merged in ViewModel.
 - Models map API responses to UI-friendly data.
 
 ---
@@ -71,10 +71,10 @@ This app provides a simple, practical Movie & TV Show discovery experience:
 ---
 
 ### 5. Architecture & Patterns
-- **MVVM architecture**: ViewModel → Repository → DataSource.  
-- **Dependency Injection**: Koin.  
-- **Reactive handling**: RxKotlin (`Single.zip`) + coroutines (where appropriate).  
-- **Image loading**: Coil.  
+- **MVVM architecture**: ViewModel → Repository → DataSource.
+- **Dependency Injection**: Koin.
+- **Reactive handling**: RxKotlin (`Single.zip`) + coroutines (where appropriate).
+- **Image loading**: Coil.
 - **Shimmer effect**: Accompanist Placeholder or custom shimmer.
 
 ---
@@ -121,7 +121,7 @@ app/
 ### Configuration — Watchmode API Key
 
 #### Option A: `local.properties` (Recommended)
-1. Open or create `local.properties` in project root.  
+1. Open or create `local.properties` in project root.
 2. Add your API key:
    ```properties
    WATCHMODE_API_KEY="your_watchmode_api_key_here"
@@ -140,11 +140,11 @@ buildTypes.each {
 git clone https://github.com/pawan1-tech/Movie-App.git
 ```
 2. Open in Android Studio
-Open the project directory in Android Studio.
+   Open the project directory in Android Studio.
 
 3. Add your Watchmode API key (see above)
 4. Run the App
-Select a device/emulator → Run ▶️
+   Select a device/emulator → Run ▶️
 
 ### Build Release APK
 ```bash
